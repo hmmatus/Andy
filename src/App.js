@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { Image,Carousel} from 'react-bootstrap'
+import "bootstrap/dist/css/bootstrap.css";
+import { imagesArray } from './assets/images/index'
 import './App.css';
+import gif from './assets/images/birthday.gif'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+class App extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      index: 0,
+      imagesArray: imagesArray,
+    }
+  }
+  render() {
+    const {imagesArray} = this.state;
+    console.log(imagesArray);
+    return (
+      <div className="App">
+        <h1>Felicidades Andrea por tu dia especial
+        </h1>
+        <img src={gif} className="image" alt="logo"/>
+        <h2>Un nuevo mundo se abre ante ti y sé que quieres explorarlo pero nunca te olvides que estaremos para guiarte y para mostrarte con nuestro amor, el camino correcto para que no salgas herida a la joven edad de quince años.</h2>
+        <Carousel
+          slide
+          interval={2000}
+          controls
+          nextIcon
+          prevIcon
+          indicators={false}
+          autoPlay
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          {imagesArray.map((element,index)=>{
+            return <Carousel.Item>
+              <Image className="imageCarousel" src={element.value} alt={`Element ${element.pos}`}/>
+              <Carousel.Caption>
+                
+              </Carousel.Caption>
+            </Carousel.Item>
+          })}
+        </Carousel>
+      </div>
+    )
+  }
 }
 
 export default App;

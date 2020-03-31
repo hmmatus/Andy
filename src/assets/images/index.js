@@ -1,0 +1,60 @@
+export const images = {
+    im1:require("./a1.jpg"),
+    im2:require("./a2.jpg"),
+    im3:require("./a3.jpg"),
+    im4:require("./a4.jpg"),
+    im5:require("./a5.jpg"),
+    im6:require("./a6.jpg"),
+    im7:require("./a7.jpg"),
+    im8:require("./a8.jpg"),
+    im9:require("./a9.jpg"),
+    im10:require("./a10.jpg"),
+    im11:require("./a11.jpg"),
+}
+
+export const imagesArray = [
+    {
+        pos:1,
+        value:images.im1
+    },
+    {
+        pos:2,
+        value:images.im2
+    },
+    {
+        pos:3,
+        value:images.im3
+    },
+    {
+        pos:4,
+        value:images.im4
+    },
+    {
+        pos:5,
+        value:images.im5
+    },
+    {
+        pos:6,
+        value:images.im6
+    },
+    {
+        pos:7,
+        value:images.im7
+    },
+    {
+        pos:8,
+        value:images.im8
+    },
+    {
+        pos:9,
+        value:images.im9
+    },
+    {
+        pos:10,
+        value:images.im10
+    },
+    {
+        pos:11,
+        value:images.im11
+    },
+]
